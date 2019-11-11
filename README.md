@@ -5,7 +5,7 @@ A repository for machine learning problems and exploration of different ML libra
 
 ## Takeways
 
-#### 01 MNIST
+#### 01_MNIST
 1. One of the first takeaways is that it is important what kind of loss function you are using in this specific problem. You can either choose the sparse_categorical_crossentropy loss or the categorical_crossentropy loss. You may have noticed that we used these two different loss functions for both datasets. The main difference is how we specify and shape our tensors that contain the labels for the specific images. For example, if you use the sparse categorical crossentropy loss the network expects to get a single value at the final output layer to calculate the error. This value is an integer which denotes the different output classes. If you want to use the standard categorical crossentropy loss you need to one-hot-encode the labels. you can do that with the following code snippet.
 
 ```python
@@ -22,7 +22,7 @@ dataset = keras.datasets.<YOUR_DATASET>
 
 3. It makes sense to take a look at the output of the artificial neural network. Especially if your neural network does not perform very well this might help you to indicate which part of the network you might want to improve. In our case we can see that the digits in the Number MNIST dataset are simply unreadable or even look more like another number than the actual digit. For the Fashion MNIST dataset we can see that some items (e.g. Ankle Boot) look like another one (e.g. Sandal) because they share some common characteristic. It would be interesting to see if a bigger network can handle different types of fashion items in a more efficient way?!
 
-#### 02 RNNs
+#### 02_RNNs
 1. You should always capture the training history including your training and validation performance. This will allow you to plot the improvement of accuracy and loss over time. It is important to do that because you will be able to recognize if your model overfits and maybe the learning rate is too high. Additionally, you need to pass the validation data to the model.fit function in order to obtain validation results. However, you can also specify the validation split so that Keras knows how much of the training data it should set aside in order to use that data for validation. The following code snippets show how you can set the validation data and record the history properly:
 ```python
 history = model.fit(x_train,y_train, epochs = 4, batch_size= 32, validation_data=(x_test, y_test))
@@ -31,7 +31,7 @@ history = model.fit(x_train,y_train, epochs = 4, batch_size= 32, validation_spli
 
 2. If you try to build a multilayer RNNs you probably need to set the `return_sequences` parameter for LSTM or CuDNNLSTM Layers to `True`. This is because the following layer expects to get an input from each timestep. For example, if you look at a time series of 80 time steps this parameter will make sure that there are 80 hidden values passed to the next layer. It's quite hard to explain so just test it out :)
 
-#### PyTorch
+#### 03_PyTorch
 1. You need to specify the batch size in the dataloader. Compared to Keras and Tensorflow which allow to specify the batch_size in the fit/evaluate/predict function this is a big difference. However, if there is no dataloader you can probably also specify the batch size in your training/testing function. Instead of using the following line of code you can probably define your own way of feeding the data into the network.
 ```python
 for batch_idx, (data, target) in enumerate(train_loader):
