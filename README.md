@@ -1,6 +1,16 @@
 # Machine-Learning-Problems
 A repository for machine learning problems and exploration of different ML libraries. The goal of this repository is to collect takeaways while developing ML models. This should improve my overall understanding of developing machine learning applications.
 
+#### Repository structure:
+The repository contains subfolders that are enumerated to denote the order in which they were created. Each folder should contain at least one `Exploration.ipynb` jupyter notebook that walks through a whole training example. The notebook explains all the steps and lists a few takeaways at the end of the notebook. The follwing table shows which framework and dataset was used for each folder:
+
+|    | Name       | Framework  | Dataset              | Created              |
+|----|------------|------------|----------------------|----------------------|
+| 01 | MNIST      | Keras      | Fashion/Number MNIST | September 29th, 2019 |
+| 02 | RNNs/LSTMs | Keras      | MNIST                | October 2nd, 2019    |
+| 03 | PyTorch    | PyTorch    | MNIST                | November 10th, 2019  |
+| 04 |            | Tensorflow |                      |                      |
+
 -----
 
 ## Takeways
