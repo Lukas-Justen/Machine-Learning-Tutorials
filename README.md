@@ -1,7 +1,5 @@
-# Machine-Learning-Problems
-A repository for machine/deep learning problems/tutorials and exploration of different ML/DL libraries. The goal of this repository is to collect takeaways while developing ML models. This should improve my overall understanding of developing machine learning and deep learning applications. 
-
-__NOTE:__ This repository is not ment to be a collection of my current work but something like a useful tutorial for Machine Learning and DeepLearning beginners. By explaining what I am doing in each of the notebooks I can understand some of the parts much better. By listing all the takeaways you can get the most important points from the notebook.
+# Machine-Learning-Tutorials
+This repository is __not__ ment to be a collection of my current work but something like a useful tutorial for Machine Learning and Deep Learning beginners. By explaining what I am doing in each of the notebooks I can also understand some of the parts much better that I have never questioned in too much detail. By listing all the takeaways at the end of a notebook I hope that you can learn to understand these libraries and problems in a quicker way.
 
 #### Repository structure:
 The repository contains subfolders that are enumerated to denote the order in which they were created. Each folder should contain at least one `Exploration.ipynb` jupyter notebook that walks through a whole training example. The notebook explains all the steps and lists a few takeaways at the end of the notebook. The follwing table shows which framework and dataset was used for each folder:
