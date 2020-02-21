@@ -4,12 +4,12 @@ A repository for machine learning problems and exploration of different ML libra
 #### Repository structure:
 The repository contains subfolders that are enumerated to denote the order in which they were created. Each folder should contain at least one `Exploration.ipynb` jupyter notebook that walks through a whole training example. The notebook explains all the steps and lists a few takeaways at the end of the notebook. The follwing table shows which framework and dataset was used for each folder:
 
-|    | Name       | Framework  | Dataset              | Created              |
-|----|------------|------------|----------------------|----------------------|
-| 01 | MNIST      | Keras      | Fashion/Number MNIST | September 29th, 2019 |
-| 02 | RNNs/LSTMs | Keras      | MNIST                | October 2nd, 2019    |
-| 03 | PyTorch    | PyTorch    | MNIST                | November 10th, 2019  |
-| 04 |            | Tensorflow |                      |                      |
+| ID | Name        | Framework  | Dataset              | Created              |
+|----|-------------|------------|----------------------|----------------------|
+| 01 | MNIST       | Keras      | Fashion/Number MNIST | September 29th, 2019 |
+| 02 | RNNs/LSTMs  | Keras      | MNIST                | October 2nd, 2019    |
+| 03 | PyTorch     | PyTorch    | MNIST                | November 10th, 2019  |
+| 04 | Adversarial | PyTorch    | CIFAR-10             | February 21st, 2020  |
 
 -----
 
@@ -52,3 +52,5 @@ for batch_idx, (data, target) in enumerate(train_loader):
 print(x.shape)
 ```
 3. You can customize the training loop very strongly. As already said, it seems to be very tricky and error prone to define your own training and testing loop. Nonetheless, I think that you can probably copy paste these functions to every new project to make sure to not introduce unnecessary bugs. Additionally, this process allows you to customize a lot of things. For instance, if you have a special way of keeping track of your losses you can do this with PyTorch.
+
+#### 04_Adversarial
